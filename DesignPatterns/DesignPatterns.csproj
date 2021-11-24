@@ -7,8 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Behavioral\AbstractFactory" />
-      <Folder Include="Creational" />
+      <Folder Include="Behavioral" />
+      <Folder Include="Creational\AbstractFactory" />
       <Folder Include="Structural" />
     </ItemGroup>
 
