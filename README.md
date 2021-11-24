@@ -1,6 +1,8 @@
 # Overview
 The purpose of this repository is to illustrate various design patterns via C# implementations which developers can relate to. Each implementation can be found under it's corresponding directory within the DesignPatterns project. Every pattern will have a Client.cs file which illustrates the usage of the pattern.
 
+Note that while the XUnit project was added and tests were created these are by no means intended as a guideline for what good unit tests would look like, simply as a convenient way of allowing people to download the source and debug a pattern should they choose.
+
 For more information on software design patterns, wikipedia has some great overviews and content (some of which will be duplicated here for ease of reference): https://en.wikipedia.org/wiki/Design_Patterns  
 
 ## Creational
