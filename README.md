@@ -14,7 +14,7 @@ Creational patterns are ones that create objects, rather than having to instanti
 * [Builder constructs complex objects by separating construction and representation.](DesignPatterns/Creational/Builder/Client.cs)
 * TODO: Factory Method creates objects without specifying the exact class to create.
 * TODO: Prototype creates objects by cloning an existing object.
-* TODO: Singleton restricts object creation for a class to only one instance.
+* [Singleton restricts object creation for a class to only one instance.](DesignPatterns/Creational/Singleton/Client.cs)
 
 ## Structural
 These concern class and object composition. They use inheritance to compose interfaces and define ways to compose objects to obtain new functionality.
