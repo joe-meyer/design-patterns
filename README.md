@@ -1,7 +1,5 @@
 # Overview
-The purpose of this repository is to illustrate various design patterns via C# implementations which developers can relate to. Each implementation can be found under it's corresponding directory within the DesignPatterns project.
-
-Note that while the XUnit project was added and tests were created these are by no means intended as a guideline for what good unit tests would look like, simply as a convenient way of allowing people to download the source and debug a pattern should they choose.
+The purpose of this repository is to illustrate various design patterns via C# implementations which developers can relate to. Note that while the XUnit project was added and tests were created these are by no means intended as a guideline for what good unit tests would look like, simply as a convenient way of allowing people to download the source and debug a pattern should they choose.
 
 For more information on software design patterns, wikipedia has some great overviews and content (some of which will be duplicated here for ease of reference): https://en.wikipedia.org/wiki/Design_Patterns  
 
@@ -12,7 +10,7 @@ Creational patterns are ones that create objects, rather than having to instanti
 
 * TODO: Abstract Factory groups object factories that have a common theme.
 * [Builder constructs complex objects by separating construction and representation.](DesignPatterns/Creational/Builder.cs)
-* TODO: Factory Method creates objects without specifying the exact class to create.
+* [Factory Method creates objects without specifying the exact class to create.](DesignPatterns/Creational/FactoryMethod.cs)
 * TODO: Prototype creates objects by cloning an existing object.
 * [Singleton restricts object creation for a class to only one instance.](DesignPatterns/Creational/Singleton.cs)
 
