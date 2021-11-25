@@ -1,8 +1,9 @@
-using System.ComponentModel.Design;
+using System;
+using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
-namespace DesignPatterns.Creational.Singleton
+namespace DesignPatterns.Creational
 {
     /// <summary>
     /// A Client showing a couple ways of managing a singleton instance. While there are other ways of doing caching in c#,
@@ -10,7 +11,7 @@ namespace DesignPatterns.Creational.Singleton
     /// 
     /// https://en.wikipedia.org/wiki/Singleton_pattern
     /// </summary>
-    public class Client
+    public class SingletonClient
     {
         private const string testKey = "test";
         private const string originalTestValue = "TestValue";
@@ -51,5 +52,32 @@ namespace DesignPatterns.Creational.Singleton
             var secondInstance = SingletonDictionaryCache.Instance;
             Assert.Equal(originalTestValue, secondInstance.GetOrAdd(testKey, () => "newValueIfNotInCache"));
         }
+    }
+    
+    public class DictionaryCache
+    {
+        private readonly Dictionary<string, object> _cache = new Dictionary<string, object>();
+
+        public T GetOrAdd<T>(string key, Func<T> value)
+        {
+            T returnValue;
+            object outValue;
+            if (!_cache.TryGetValue(key, out outValue))
+            {
+                returnValue = value.Invoke();
+                _cache.Add(key, returnValue);
+            }
+            else
+            {
+                returnValue = (T)outValue;
+            }
+
+            return returnValue;
+        }
+    }
+    
+    public static class SingletonDictionaryCache
+    {
+        public static DictionaryCache Instance { get; } = new DictionaryCache();
     }
 }
